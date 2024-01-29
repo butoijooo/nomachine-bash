@@ -22,15 +22,15 @@ read -p "Paste Ngrok Authtoken: " CRP
 clear
 echo "SILESSUREKKU MALEBBIE (GUNAKAN SEPERLUNYA)"
 echo "======================="
-echo "choose ngrok region (for better connection)."
+echo "MASUKKAN TOKENMU YAGH (LIMIT 1GB /Month)."
 echo "======================="
-echo "us - United States (Ohio)"
-echo "eu - Europe (Frankfurt)"
-echo "ap - Asia/Pacific (Singapore)"
-echo "au - Australia (Sydney)"
-echo "sa - South America (Sao Paulo)"
-echo "jp - Japan (Tokyo)"
-echo "in - India (Mumbai)"
+echo "Pilih ap ya"
+echo "jangan salah"
+echo "Nanti lambat"
+echo "maksimal 6 jam"
+echo "backup data sebelum 6 jam)"
+echo "Selamat menikmati RDP Full acces"
+echo "OK kaka"
 read -p "choose ngrok region: " CRP
 ./ngrok tcp --region $CRP 4000 &>/dev/null &
 sleep 1
@@ -41,7 +41,7 @@ echo "NoMachine: https://www.nomachine.com/download"
 echo Done! NoMachine Information:
 echo IP Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' 
-echo User: user
-echo Passwd: 123456
-echo "VM can't connect? Restart Cloud Shell then Re-run script."
+echo User: bacox
+echo Passwd: 11111
+echo "Jika tidak jalan mulai dari awal kemungkinan salah kode"
 seq 1 43200 | while read i; do echo -en "\r Running .     $i s /43200 s";sleep 0.1;echo -en "\r Running ..    $i s /43200 s";sleep 0.1;echo -en "\r Running ...   $i s /43200 s";sleep 0.1;echo -en "\r Running ....  $i s /43200 s";sleep 0.1;echo -en "\r Running ..... $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1;echo -en "\r Running  .... $i s /43200 s";sleep 0.1;echo -en "\r Running   ... $i s /43200 s";sleep 0.1;echo -en "\r Running    .. $i s /43200 s";sleep 0.1;echo -en "\r Running     . $i s /43200 s";sleep 0.1; done
