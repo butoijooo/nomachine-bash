@@ -14,12 +14,9 @@ function goto
 }
 
 : ngrok
-clear
 echo "Go to: https://dashboard.ngrok.com/get-started/your-authtoken"
 read -p "Paste Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
-
-clear
 echo "SILESSUREKKU MALEBBIE (GUNAKAN SEPERLUNYA)"
 echo "======================="
 echo "MASUKKAN TOKENMU YAGH (LIMIT 1GB /Month)."
@@ -35,8 +32,7 @@ read -p "choose ngrok region: " CRP
 ./ngrok tcp --region $CRP 4000 &>/dev/null &
 sleep 1
 if curl --silent --show-error http://127.0.0.1:4040/api/tunnels  > /dev/null 2>&1; then echo OK; else echo "Ngrok Error! Please try again!" && sleep 1 && goto ngrok; fi
-docker run --env VNC_PW=secure. --env DEBUG=true --publish 5901:5901 --publish 6901:6901 christian773/xfce-vnc:latest
-clear
+docker run --rm -d --network host --privileged --name nomachine-xfce4 -e PASSWORD=11111 -e USER=bacox --cap-add=SYS_PTRACE --shm-size=1g christian773/xfce-vnc:xfce4
 echo "NoMachine: https://www.nomachine.com/download"
 echo Done! NoMachine Information:
 echo IP Address:
